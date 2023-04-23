@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="icon" href="./img/cipherC.png">
+        <title>Cipher Chat</title>
+    </head>
+
+    <body>
+      
+        <div class="centered-form">
+            <div class="centered-form-box">
+              <h1><center>Cipher Chat</center></h1>
+              <h3><center>Connect with fellow developers and upgrade your skills</center></h3>
+                
+                
+                <form action="chat.html">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <select name="room" required>
+                        <option value="" disabled selected>Developers Hub</option>
+                        <option value="C Language">C Language</option>
+                        <option value="C++">C++</option>
+                        <option value="Java">Java</option>
+                        <option value="Python">Python</option>
+                        <option value="Data Structure">Data Structure</option>
+                        <option value="Full Stack">Full Stack Development</option>
+                    </select>
+                    <button>Join Chat</button>
+                </form>
+            </div>
+        </div>
+    </body>
+    <style>
+      body {
+          background-color: #1a1a1a;
+          font-family: Arial, sans-serif;
+      }
+
+      .centered-form {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+      }
+
+      .centered-form-box {
+        position: absolute;
+top: 50%;
+left: 50%;
+width: 400px;
+padding: 40px;
+transform: translate(-50%, -50%);
+background: rgba(0, 0, 0, .5);
+box-sizing: border-box;
+box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+border-radius: 10px;
+      }
+
+      
+
+      h1 {
+        
+          color: #fff;
+          font-size: 3rem;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          margin-bottom: 20px;
+      }
+      h3 {
+        color: #fff;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+
+      }
+
+      input[type="text"],
+      select {
+          width: 100%;
+          padding: 10px;
+          border-radius: 5px;
+          border: none;
+          margin-bottom: 20px;
+          background-color: #333;
+          color: #fff;
+          font-size: 1rem;
+      }
+
+      .login-box form a {
+position: relative;
+display: inline-block;
+padding: 10px 20px;
+color: #03e9f4;
+font-size: 16px;
+text-decoration: none;
+text-transform: uppercase;
+overflow: hidden;
+transition: .5s;
+margin-top: 40px;
+letter-spacing: 4px
+}
+
+.login-box a:hover {
+background: #03e9f4;
+color: #fff;
+border-radius: 5px;
+box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
+}
+
+.login-box a span {
+position: absolute;
+display: block;
+}
+
+.login-box a span:nth-child(1) {
+top: 0;
+left: -100%;
+width: 100%;
+height: 2px;
+background: linear-gradient(90deg, transparent, #03e9f4);
+animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+0% {
+left: -100%;
+}
+50%,100% {
+left: 100%;
+}
+}
+
+.login-box a span:nth-child(2) {
+top: -100%;
+right: 0;
+width: 2px;
+height: 100%;
+background: linear-gradient(180deg, transparent, #03e9f4);
+animation: btn-anim2 1s linear infinite;
+animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+0% {
+top: -100%;
+}
+50%,100% {
+top: 100%;
+}
+}
+
+.login-box a span:nth-child(3) {
+bottom: 0;
+right: -100%;
+width: 100%;
+height: 2px;
+background: linear-gradient(270deg, transparent, #03e9f4);
+animation: btn-anim3 1s linear infinite;
+animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+0% {
+right: -100%;
+}
+50%,100% {
+right: 100%;
+}
+}
+
+.login-box a span:nth-child(4) {
+bottom: -100%;
+left: 0;
+width: 2px;
+height: 100%;
+background: linear-gradient(360deg, transparent, #03e9f4);
+animation: btn-anim4 1s linear infinite;
+animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+0% {
+bottom: -100%;
+}
+50%,100% {
+bottom: 100%;
+}
+}
+
+       html {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /*background: linear-gradient(#141e30, #243b55);*/
+    background-image: url("https://prod-discovery.edx-cdn.org/media/programs/card_images/2f377daa-30b3-487f-941c-18503633a4a1-12209ba765df.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+  }
+
+  
+  
+ 
+
+    </style>
+
+</html>

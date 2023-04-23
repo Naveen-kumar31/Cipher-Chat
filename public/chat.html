@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" href="./img/cipherC.png">
+    <title>Cipher Chat</title>
+</head>
+
+    <body>
+        <div class="chat">
+            <div class="chat-sidebar" id="sidebar">
+            </div>
+            <div class="chat-main">
+                <div id="messages" class="chat-messages"></div>
+                <div class="compose">
+                    <form id="messageForm">
+                        <input type="text" name="message" id="message" placeholder="Message" autocomplete="off"
+                            required>
+                        <button id="submit-form">Send</button>
+                    </form>
+                    <button id="shareLocation"><img src="https://www.pngall.com/wp-content/uploads/9/Location-Symbol-PNG-Free-Image.png" alt="Location Icon" width="30" height="30"></button>
+                </div>
+            </div>
+        </div>
+        <script id="sidebar-template" type="x-tmpl-mustache">
+        <h1 class="room-title">{{room}}</h1>
+        <h2 class="list-title">Users</h2>
+        <ul class="users">
+            {{#users}}
+                <li>{{username}}</li>
+            {{/users}}
+           </ul>
+    </script>
+        <script id="message-template" type="x-tmpl-mustache">
+        <div class="message" style="background-color:{{bgColor}} !important; color:{{color}} !important">
+            <p>
+                <span class="message-name">{{username}}</span>
+                <span class="message-meta">{{createdAt}}</span>
+            </p>
+            <p>{{msg}}</p>
+        </div>
+    </script>
+        <script id="location-template" type="x-tmpl-mustache">
+        <div class="message">
+            <p>
+                <span class="message-name">{{username}}</span>
+                <span class="message-meta">{{createdAt}}</span>
+            </p>
+            <p><a href="{{locationURL}}" target="_blank">My Current Location</a></p>
+        </div>
+    </script>
+
+    <div class="button-container">
+        
+        <button onclick="gotoLink(this)" class="raise" value="https://www.w3schools.com/c/"><span>C</button></span>
+        <button onclick="gotoLink(this)"  class="raise" value="https://www.w3schools.com/cpp/"><span>C++</button></span>
+        <button onclick="gotoLink(this)"  class="raise" value="https://www.w3schools.com/java/"><span>Java</button></span>
+        <button onclick="gotoLink(this)"  class="raise" value="https://www.w3schools.com/python/"><span>Python</button></span>
+        <button onclick="gotoLink(this)"  class="raise" value="https://www.w3schools.in/data-structures/tutorials/"><span>Data Structure</button></span>
+        <button onclick="gotoLink(this)"  class="raise" value="https://www.w3schools.com/whatis/whatis_fullstack.asp"><span>Full Stack</button></span>
+      </div>
+      <style>
+        .button-container {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.button-container button {
+  color: #141617;
+  background :none;
+   /* Green background */
+  border: 2px solid;
+  font: inherit;
+  line-height: 0.5;
+  padding: 1em 1em;
+  margin: 10px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+    
+
+      </style>
+      
+
+    <script>
+        function gotoLink(link){
+            console.log(link.value);
+            window.open(link.value);
+        }
+    </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+            integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="./js/chat.js"></script>
+    </body>
+    <div class="d-flex flex-column justify-content-center w-100 h-100">
+
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            
+            
+                
+                
+      
+            <a href="https://manuel.pinto.dev" class="text-decoration-none">
+                
+            </a>
+
+        </div>
+    </div>
+    </div>
+    <style>
+        body {
+	background: linear-gradient(-45deg, #a44ea8, #db888e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+    </style>
+
+</html>
